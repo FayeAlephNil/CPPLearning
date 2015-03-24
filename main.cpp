@@ -1,5 +1,7 @@
 #include <iostream>
 #include "main.h"
+#include "util/util.h"
+#include "math/math.h"
 
 using namespace std;
 
@@ -23,13 +25,9 @@ int main() {
     return 0;
 }
 
-int factorial(int n) {
-    if (n == 0) {return 1;} else {return n * factorial(n-1);}
-}
-
 int factorial_in() {
     while (true) {
-        int n = num_in(" to take the facorial of");
+        int n = num_in(" to take the factorial of");
         if (n < 0) {
             cout << "Please input a number that is greater than 0\n";
             continue;
@@ -39,19 +37,4 @@ int factorial_in() {
         }
     }
     return 0;
-}
-
-int num_in(string option) {
-    while (true) {
-        cout << "Input a number" << option << "\n";
-        string s;
-        cin >> s;
-        try {
-            return stoi(s);
-            break;
-        } catch (invalid_argument) {
-            cout << "Please input a number\n";
-            continue;
-        }
-    }
 }

@@ -1,3 +1,5 @@
+// Created by Strikingwolf
+
 using namespace std;
 
 #ifndef _CPPLEARNING_MAIN_H_
@@ -6,8 +8,4 @@ using namespace std;
 #endif //_CPPLEARNING_MAIN_H_
 int main();
 
-int factorial(int n);
-
 int factorial_in();
-
-int num_in(string option);

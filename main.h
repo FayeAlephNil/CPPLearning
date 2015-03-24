@@ -1,5 +1,7 @@
 // Created by Strikingwolf
 
+#include <vector>
+
 using namespace std;
 
 #ifndef _CPPLEARNING_MAIN_H_
@@ -8,4 +10,5 @@ using namespace std;
 #endif //_CPPLEARNING_MAIN_H_
 int main();
 
-int factorial_in();
+vector<int> factorial_in();
+vector<int> fibbonacci_in() ;

@@ -11,11 +11,13 @@ int main() {
         string function;
         cin >> function;
         if (function == "factorial") {
-            factorial_in();
+            vector<int> result = factorial_in();
+            cout << "The factorial of " << result[0] << " is " << result[1] << "\n";
             break;
         } else if (function == "fibonacci") {
-            cout << "Not implemented\n";
-            continue;
+            vector<int> result = fibbonacci_in();
+            cout << "Stage " << result[0] << " in the fibonacci sequence is " << result[1] << "\n";
+            break;
         }
         else {
             cout << "That is not a valid function\n";
@@ -25,16 +27,19 @@ int main() {
     return 0;
 }
 
-int factorial_in() {
+vector<int> factorial_in() {
     while (true) {
         int n = num_in(" to take the factorial of");
         if (n < 0) {
             cout << "Please input a number that is greater than 0\n";
             continue;
         } else {
-            cout << "The factorial of " << n << " is " << factorial(n) << "\n";
-            break;
+            return {n, factorial(n)};
         }
     }
-    return 0;
+}
+
+vector<int> fibbonacci_in() {
+    int n = num_in(" to find the fibonacci stage of");
+    return  {n, fibonacci(n)};
 }
